@@ -37,7 +37,8 @@ pipeline{
                             then
                                 terraform apply -auto-approve
                             else
-                                terraform destroy -auto-approve                            
+                                terraform destroy -auto-approve 
+                            fi                           
                         """
                     }                    
                 }
