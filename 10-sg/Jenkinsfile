@@ -77,11 +77,9 @@ pipeline{
                         build job: '60-acm', parameters: [string(name: 'ACTION', value: 'apply')], wait: false
                     }
                 }
-                stage('In Sequential 1'){
-                        stage('70-ingress-alb'){
-                        steps{
-                            build job: '70-ingress-alb', parameters: [string(name: 'ACTION', value: 'apply')], wait: false
-                        }
+                stage('70-ingress-alb'){
+                    steps{
+                        build job: '70-ingress-alb', parameters: [string(name: 'ACTION', value: 'apply')], wait: false
                     }
                 }
             }
